@@ -1,0 +1,1501 @@
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [code] => AD
+                    [name] => Andorra
+                )
+
+            [1] => Array
+                (
+                    [code] => AE
+                    [name] => United Arab Emirates
+                )
+
+            [2] => Array
+                (
+                    [code] => AF
+                    [name] => Afghanistan
+                )
+
+            [3] => Array
+                (
+                    [code] => AG
+                    [name] => Antigua and Barbuda
+                )
+
+            [4] => Array
+                (
+                    [code] => AI
+                    [name] => Anguilla
+                )
+
+            [5] => Array
+                (
+                    [code] => AL
+                    [name] => Albania
+                )
+
+            [6] => Array
+                (
+                    [code] => AM
+                    [name] => Armenia
+                )
+
+            [7] => Array
+                (
+                    [code] => AO
+                    [name] => Angola
+                )
+
+            [8] => Array
+                (
+                    [code] => AQ
+                    [name] => Antarctica
+                )
+
+            [9] => Array
+                (
+                    [code] => AR
+                    [name] => Argentina
+                )
+
+            [10] => Array
+                (
+                    [code] => AS
+                    [name] => American Samoa
+                )
+
+            [11] => Array
+                (
+                    [code] => AT
+                    [name] => Austria
+                )
+
+            [12] => Array
+                (
+                    [code] => AU
+                    [name] => Australia
+                )
+
+            [13] => Array
+                (
+                    [code] => AW
+                    [name] => Aruba
+                )
+
+            [14] => Array
+                (
+                    [code] => AX
+                    [name] => Åland Islands
+                )
+
+            [15] => Array
+                (
+                    [code] => AZ
+                    [name] => Azerbaijan
+                )
+
+            [16] => Array
+                (
+                    [code] => BA
+                    [name] => Bosnia and Herzegovina
+                )
+
+            [17] => Array
+                (
+                    [code] => BB
+                    [name] => Barbados
+                )
+
+            [18] => Array
+                (
+                    [code] => BD
+                    [name] => Bangladesh
+                )
+
+            [19] => Array
+                (
+                    [code] => BE
+                    [name] => Belgium
+                )
+
+            [20] => Array
+                (
+                    [code] => BF
+                    [name] => Burkina Faso
+                )
+
+            [21] => Array
+                (
+                    [code] => BG
+                    [name] => Bulgaria
+                )
+
+            [22] => Array
+                (
+                    [code] => BH
+                    [name] => Bahrain
+                )
+
+            [23] => Array
+                (
+                    [code] => BI
+                    [name] => Burundi
+                )
+
+            [24] => Array
+                (
+                    [code] => BJ
+                    [name] => Benin
+                )
+
+            [25] => Array
+                (
+                    [code] => BL
+                    [name] => Saint Barthélemy
+                )
+
+            [26] => Array
+                (
+                    [code] => BM
+                    [name] => Bermuda
+                )
+
+            [27] => Array
+                (
+                    [code] => BN
+                    [name] => Brunei Darussalam
+                )
+
+            [28] => Array
+                (
+                    [code] => BO
+                    [name] => Bolivia, Plurinational State of
+                )
+
+            [29] => Array
+                (
+                    [code] => BQ
+                    [name] => Bonaire, Sint Eustatius and Saba
+                )
+
+            [30] => Array
+                (
+                    [code] => BR
+                    [name] => Brazil
+                )
+
+            [31] => Array
+                (
+                    [code] => BS
+                    [name] => Bahamas
+                )
+
+            [32] => Array
+                (
+                    [code] => BT
+                    [name] => Bhutan
+                )
+
+            [33] => Array
+                (
+                    [code] => BV
+                    [name] => Bouvet Island
+                )
+
+            [34] => Array
+                (
+                    [code] => BW
+                    [name] => Botswana
+                )
+
+            [35] => Array
+                (
+                    [code] => BY
+                    [name] => Belarus
+                )
+
+            [36] => Array
+                (
+                    [code] => BZ
+                    [name] => Belize
+                )
+
+            [37] => Array
+                (
+                    [code] => CA
+                    [name] => Canada
+                )
+
+            [38] => Array
+                (
+                    [code] => CC
+                    [name] => Cocos (Keeling) Islands
+                )
+
+            [39] => Array
+                (
+                    [code] => CD
+                    [name] => Congo, the Democratic Republic of the
+                )
+
+            [40] => Array
+                (
+                    [code] => CF
+                    [name] => Central African Republic
+                )
+
+            [41] => Array
+                (
+                    [code] => CG
+                    [name] => Congo
+                )
+
+            [42] => Array
+                (
+                    [code] => CH
+                    [name] => Switzerland
+                )
+
+            [43] => Array
+                (
+                    [code] => CI
+                    [name] => Côte d'Ivoire
+                )
+
+            [44] => Array
+                (
+                    [code] => CK
+                    [name] => Cook Islands
+                )
+
+            [45] => Array
+                (
+                    [code] => CL
+                    [name] => Chile
+                )
+
+            [46] => Array
+                (
+                    [code] => CM
+                    [name] => Cameroon
+                )
+
+            [47] => Array
+                (
+                    [code] => CN
+                    [name] => China
+                )
+
+            [48] => Array
+                (
+                    [code] => CO
+                    [name] => Colombia
+                )
+
+            [49] => Array
+                (
+                    [code] => CR
+                    [name] => Costa Rica
+                )
+
+            [50] => Array
+                (
+                    [code] => CU
+                    [name] => Cuba
+                )
+
+            [51] => Array
+                (
+                    [code] => CV
+                    [name] => Cape Verde
+                )
+
+            [52] => Array
+                (
+                    [code] => CW
+                    [name] => Curaçao
+                )
+
+            [53] => Array
+                (
+                    [code] => CX
+                    [name] => Christmas Island
+                )
+
+            [54] => Array
+                (
+                    [code] => CY
+                    [name] => Cyprus
+                )
+
+            [55] => Array
+                (
+                    [code] => CZ
+                    [name] => Czech Republic
+                )
+
+            [56] => Array
+                (
+                    [code] => DE
+                    [name] => Germany
+                )
+
+            [57] => Array
+                (
+                    [code] => DJ
+                    [name] => Djibouti
+                )
+
+            [58] => Array
+                (
+                    [code] => DK
+                    [name] => Denmark
+                )
+
+            [59] => Array
+                (
+                    [code] => DM
+                    [name] => Dominica
+                )
+
+            [60] => Array
+                (
+                    [code] => DO
+                    [name] => Dominican Republic
+                )
+
+            [61] => Array
+                (
+                    [code] => DZ
+                    [name] => Algeria
+                )
+
+            [62] => Array
+                (
+                    [code] => EC
+                    [name] => Ecuador
+                )
+
+            [63] => Array
+                (
+                    [code] => EE
+                    [name] => Estonia
+                )
+
+            [64] => Array
+                (
+                    [code] => EG
+                    [name] => Egypt
+                )
+
+            [65] => Array
+                (
+                    [code] => EH
+                    [name] => Western Sahara
+                )
+
+            [66] => Array
+                (
+                    [code] => ER
+                    [name] => Eritrea
+                )
+
+            [67] => Array
+                (
+                    [code] => ES
+                    [name] => Spain
+                )
+
+            [68] => Array
+                (
+                    [code] => ET
+                    [name] => Ethiopia
+                )
+
+            [69] => Array
+                (
+                    [code] => FI
+                    [name] => Finland
+                )
+
+            [70] => Array
+                (
+                    [code] => FJ
+                    [name] => Fiji
+                )
+
+            [71] => Array
+                (
+                    [code] => FK
+                    [name] => Falkland Islands (Malvinas)
+                )
+
+            [72] => Array
+                (
+                    [code] => FM
+                    [name] => Micronesia, Federated States of
+                )
+
+            [73] => Array
+                (
+                    [code] => FO
+                    [name] => Faroe Islands
+                )
+
+            [74] => Array
+                (
+                    [code] => FR
+                    [name] => France
+                )
+
+            [75] => Array
+                (
+                    [code] => GA
+                    [name] => Gabon
+                )
+
+            [76] => Array
+                (
+                    [code] => GB
+                    [name] => United Kingdom
+                )
+
+            [77] => Array
+                (
+                    [code] => GD
+                    [name] => Grenada
+                )
+
+            [78] => Array
+                (
+                    [code] => GE
+                    [name] => Georgia
+                )
+
+            [79] => Array
+                (
+                    [code] => GF
+                    [name] => French Guiana
+                )
+
+            [80] => Array
+                (
+                    [code] => GG
+                    [name] => Guernsey
+                )
+
+            [81] => Array
+                (
+                    [code] => GH
+                    [name] => Ghana
+                )
+
+            [82] => Array
+                (
+                    [code] => GI
+                    [name] => Gibraltar
+                )
+
+            [83] => Array
+                (
+                    [code] => GL
+                    [name] => Greenland
+                )
+
+            [84] => Array
+                (
+                    [code] => GM
+                    [name] => Gambia
+                )
+
+            [85] => Array
+                (
+                    [code] => GN
+                    [name] => Guinea
+                )
+
+            [86] => Array
+                (
+                    [code] => GP
+                    [name] => Guadeloupe
+                )
+
+            [87] => Array
+                (
+                    [code] => GQ
+                    [name] => Equatorial Guinea
+                )
+
+            [88] => Array
+                (
+                    [code] => GR
+                    [name] => Greece
+                )
+
+            [89] => Array
+                (
+                    [code] => GS
+                    [name] => South Georgia and the South Sandwich Islands
+                )
+
+            [90] => Array
+                (
+                    [code] => GT
+                    [name] => Guatemala
+                )
+
+            [91] => Array
+                (
+                    [code] => GU
+                    [name] => Guam
+                )
+
+            [92] => Array
+                (
+                    [code] => GW
+                    [name] => Guinea-Bissau
+                )
+
+            [93] => Array
+                (
+                    [code] => GY
+                    [name] => Guyana
+                )
+
+            [94] => Array
+                (
+                    [code] => HK
+                    [name] => Hong Kong
+                )
+
+            [95] => Array
+                (
+                    [code] => HM
+                    [name] => Heard Island and McDonald Islands
+                )
+
+            [96] => Array
+                (
+                    [code] => HN
+                    [name] => Honduras
+                )
+
+            [97] => Array
+                (
+                    [code] => HR
+                    [name] => Croatia
+                )
+
+            [98] => Array
+                (
+                    [code] => HT
+                    [name] => Haiti
+                )
+
+            [99] => Array
+                (
+                    [code] => HU
+                    [name] => Hungary
+                )
+
+            [100] => Array
+                (
+                    [code] => ID
+                    [name] => Indonesia
+                )
+
+            [101] => Array
+                (
+                    [code] => IE
+                    [name] => Ireland
+                )
+
+            [102] => Array
+                (
+                    [code] => IL
+                    [name] => Israel
+                )
+
+            [103] => Array
+                (
+                    [code] => IM
+                    [name] => Isle of Man
+                )
+
+            [104] => Array
+                (
+                    [code] => IN
+                    [name] => India
+                )
+
+            [105] => Array
+                (
+                    [code] => IO
+                    [name] => British Indian Ocean Territory
+                )
+
+            [106] => Array
+                (
+                    [code] => IQ
+                    [name] => Iraq
+                )
+
+            [107] => Array
+                (
+                    [code] => IR
+                    [name] => Iran, Islamic Republic of
+                )
+
+            [108] => Array
+                (
+                    [code] => IS
+                    [name] => Iceland
+                )
+
+            [109] => Array
+                (
+                    [code] => IT
+                    [name] => Italy
+                )
+
+            [110] => Array
+                (
+                    [code] => JE
+                    [name] => Jersey
+                )
+
+            [111] => Array
+                (
+                    [code] => JM
+                    [name] => Jamaica
+                )
+
+            [112] => Array
+                (
+                    [code] => JO
+                    [name] => Jordan
+                )
+
+            [113] => Array
+                (
+                    [code] => JP
+                    [name] => Japan
+                )
+
+            [114] => Array
+                (
+                    [code] => KE
+                    [name] => Kenya
+                )
+
+            [115] => Array
+                (
+                    [code] => KG
+                    [name] => Kyrgyzstan
+                )
+
+            [116] => Array
+                (
+                    [code] => KH
+                    [name] => Cambodia
+                )
+
+            [117] => Array
+                (
+                    [code] => KI
+                    [name] => Kiribati
+                )
+
+            [118] => Array
+                (
+                    [code] => KM
+                    [name] => Comoros
+                )
+
+            [119] => Array
+                (
+                    [code] => KN
+                    [name] => Saint Kitts and Nevis
+                )
+
+            [120] => Array
+                (
+                    [code] => KP
+                    [name] => Korea, Democratic People's Republic of
+                )
+
+            [121] => Array
+                (
+                    [code] => KR
+                    [name] => Korea, Republic of
+                )
+
+            [122] => Array
+                (
+                    [code] => KW
+                    [name] => Kuwait
+                )
+
+            [123] => Array
+                (
+                    [code] => KY
+                    [name] => Cayman Islands
+                )
+
+            [124] => Array
+                (
+                    [code] => KZ
+                    [name] => Kazakhstan
+                )
+
+            [125] => Array
+                (
+                    [code] => LA
+                    [name] => Lao People's Democratic Republic
+                )
+
+            [126] => Array
+                (
+                    [code] => LB
+                    [name] => Lebanon
+                )
+
+            [127] => Array
+                (
+                    [code] => LC
+                    [name] => Saint Lucia
+                )
+
+            [128] => Array
+                (
+                    [code] => LI
+                    [name] => Liechtenstein
+                )
+
+            [129] => Array
+                (
+                    [code] => LK
+                    [name] => Sri Lanka
+                )
+
+            [130] => Array
+                (
+                    [code] => LR
+                    [name] => Liberia
+                )
+
+            [131] => Array
+                (
+                    [code] => LS
+                    [name] => Lesotho
+                )
+
+            [132] => Array
+                (
+                    [code] => LT
+                    [name] => Lithuania
+                )
+
+            [133] => Array
+                (
+                    [code] => LU
+                    [name] => Luxembourg
+                )
+
+            [134] => Array
+                (
+                    [code] => LV
+                    [name] => Latvia
+                )
+
+            [135] => Array
+                (
+                    [code] => LY
+                    [name] => Libya
+                )
+
+            [136] => Array
+                (
+                    [code] => MA
+                    [name] => Morocco
+                )
+
+            [137] => Array
+                (
+                    [code] => MC
+                    [name] => Monaco
+                )
+
+            [138] => Array
+                (
+                    [code] => MD
+                    [name] => Moldova, Republic of
+                )
+
+            [139] => Array
+                (
+                    [code] => ME
+                    [name] => Montenegro
+                )
+
+            [140] => Array
+                (
+                    [code] => MF
+                    [name] => Saint Martin (French part)
+                )
+
+            [141] => Array
+                (
+                    [code] => MG
+                    [name] => Madagascar
+                )
+
+            [142] => Array
+                (
+                    [code] => MH
+                    [name] => Marshall Islands
+                )
+
+            [143] => Array
+                (
+                    [code] => MK
+                    [name] => Macedonia, the Former Yugoslav Republic of
+                )
+
+            [144] => Array
+                (
+                    [code] => ML
+                    [name] => Mali
+                )
+
+            [145] => Array
+                (
+                    [code] => MM
+                    [name] => Myanmar
+                )
+
+            [146] => Array
+                (
+                    [code] => MN
+                    [name] => Mongolia
+                )
+
+            [147] => Array
+                (
+                    [code] => MO
+                    [name] => Macao
+                )
+
+            [148] => Array
+                (
+                    [code] => MP
+                    [name] => Northern Mariana Islands
+                )
+
+            [149] => Array
+                (
+                    [code] => MQ
+                    [name] => Martinique
+                )
+
+            [150] => Array
+                (
+                    [code] => MR
+                    [name] => Mauritania
+                )
+
+            [151] => Array
+                (
+                    [code] => MS
+                    [name] => Montserrat
+                )
+
+            [152] => Array
+                (
+                    [code] => MT
+                    [name] => Malta
+                )
+
+            [153] => Array
+                (
+                    [code] => MU
+                    [name] => Mauritius
+                )
+
+            [154] => Array
+                (
+                    [code] => MV
+                    [name] => Maldives
+                )
+
+            [155] => Array
+                (
+                    [code] => MW
+                    [name] => Malawi
+                )
+
+            [156] => Array
+                (
+                    [code] => MX
+                    [name] => Mexico
+                )
+
+            [157] => Array
+                (
+                    [code] => MY
+                    [name] => Malaysia
+                )
+
+            [158] => Array
+                (
+                    [code] => MZ
+                    [name] => Mozambique
+                )
+
+            [159] => Array
+                (
+                    [code] => NA
+                    [name] => Namibia
+                )
+
+            [160] => Array
+                (
+                    [code] => NC
+                    [name] => New Caledonia
+                )
+
+            [161] => Array
+                (
+                    [code] => NE
+                    [name] => Niger
+                )
+
+            [162] => Array
+                (
+                    [code] => NF
+                    [name] => Norfolk Island
+                )
+
+            [163] => Array
+                (
+                    [code] => NG
+                    [name] => Nigeria
+                )
+
+            [164] => Array
+                (
+                    [code] => NI
+                    [name] => Nicaragua
+                )
+
+            [165] => Array
+                (
+                    [code] => NL
+                    [name] => Netherlands
+                )
+
+            [166] => Array
+                (
+                    [code] => NO
+                    [name] => Norway
+                )
+
+            [167] => Array
+                (
+                    [code] => NP
+                    [name] => Nepal
+                )
+
+            [168] => Array
+                (
+                    [code] => NR
+                    [name] => Nauru
+                )
+
+            [169] => Array
+                (
+                    [code] => NU
+                    [name] => Niue
+                )
+
+            [170] => Array
+                (
+                    [code] => NZ
+                    [name] => New Zealand
+                )
+
+            [171] => Array
+                (
+                    [code] => OM
+                    [name] => Oman
+                )
+
+            [172] => Array
+                (
+                    [code] => PA
+                    [name] => Panama
+                )
+
+            [173] => Array
+                (
+                    [code] => PE
+                    [name] => Peru
+                )
+
+            [174] => Array
+                (
+                    [code] => PF
+                    [name] => French Polynesia
+                )
+
+            [175] => Array
+                (
+                    [code] => PG
+                    [name] => Papua New Guinea
+                )
+
+            [176] => Array
+                (
+                    [code] => PH
+                    [name] => Philippines
+                )
+
+            [177] => Array
+                (
+                    [code] => PK
+                    [name] => Pakistan
+                )
+
+            [178] => Array
+                (
+                    [code] => PL
+                    [name] => Poland
+                )
+
+            [179] => Array
+                (
+                    [code] => PM
+                    [name] => Saint Pierre and Miquelon
+                )
+
+            [180] => Array
+                (
+                    [code] => PN
+                    [name] => Pitcairn
+                )
+
+            [181] => Array
+                (
+                    [code] => PR
+                    [name] => Puerto Rico
+                )
+
+            [182] => Array
+                (
+                    [code] => PS
+                    [name] => Palestine, State of
+                )
+
+            [183] => Array
+                (
+                    [code] => PT
+                    [name] => Portugal
+                )
+
+            [184] => Array
+                (
+                    [code] => PW
+                    [name] => Palau
+                )
+
+            [185] => Array
+                (
+                    [code] => PY
+                    [name] => Paraguay
+                )
+
+            [186] => Array
+                (
+                    [code] => QA
+                    [name] => Qatar
+                )
+
+            [187] => Array
+                (
+                    [code] => RE
+                    [name] => Réunion
+                )
+
+            [188] => Array
+                (
+                    [code] => RO
+                    [name] => Romania
+                )
+
+            [189] => Array
+                (
+                    [code] => RS
+                    [name] => Serbia
+                )
+
+            [190] => Array
+                (
+                    [code] => RU
+                    [name] => Russian Federation
+                )
+
+            [191] => Array
+                (
+                    [code] => RW
+                    [name] => Rwanda
+                )
+
+            [192] => Array
+                (
+                    [code] => SA
+                    [name] => Saudi Arabia
+                )
+
+            [193] => Array
+                (
+                    [code] => SB
+                    [name] => Solomon Islands
+                )
+
+            [194] => Array
+                (
+                    [code] => SC
+                    [name] => Seychelles
+                )
+
+            [195] => Array
+                (
+                    [code] => SD
+                    [name] => Sudan
+                )
+
+            [196] => Array
+                (
+                    [code] => SE
+                    [name] => Sweden
+                )
+
+            [197] => Array
+                (
+                    [code] => SG
+                    [name] => Singapore
+                )
+
+            [198] => Array
+                (
+                    [code] => SH
+                    [name] => Saint Helena, Ascension and Tristan da Cunha
+                )
+
+            [199] => Array
+                (
+                    [code] => SI
+                    [name] => Slovenia
+                )
+
+            [200] => Array
+                (
+                    [code] => SJ
+                    [name] => Svalbard and Jan Mayen
+                )
+
+            [201] => Array
+                (
+                    [code] => SK
+                    [name] => Slovakia
+                )
+
+            [202] => Array
+                (
+                    [code] => SL
+                    [name] => Sierra Leone
+                )
+
+            [203] => Array
+                (
+                    [code] => SM
+                    [name] => San Marino
+                )
+
+            [204] => Array
+                (
+                    [code] => SN
+                    [name] => Senegal
+                )
+
+            [205] => Array
+                (
+                    [code] => SO
+                    [name] => Somalia
+                )
+
+            [206] => Array
+                (
+                    [code] => SR
+                    [name] => Suriname
+                )
+
+            [207] => Array
+                (
+                    [code] => SS
+                    [name] => South Sudan
+                )
+
+            [208] => Array
+                (
+                    [code] => ST
+                    [name] => Sao Tome and Principe
+                )
+
+            [209] => Array
+                (
+                    [code] => SV
+                    [name] => El Salvador
+                )
+
+            [210] => Array
+                (
+                    [code] => SX
+                    [name] => Sint Maarten (Dutch part)
+                )
+
+            [211] => Array
+                (
+                    [code] => SY
+                    [name] => Syrian Arab Republic
+                )
+
+            [212] => Array
+                (
+                    [code] => SZ
+                    [name] => Swaziland
+                )
+
+            [213] => Array
+                (
+                    [code] => TC
+                    [name] => Turks and Caicos Islands
+                )
+
+            [214] => Array
+                (
+                    [code] => TD
+                    [name] => Chad
+                )
+
+            [215] => Array
+                (
+                    [code] => TF
+                    [name] => French Southern Territories
+                )
+
+            [216] => Array
+                (
+                    [code] => TG
+                    [name] => Togo
+                )
+
+            [217] => Array
+                (
+                    [code] => TH
+                    [name] => Thailand
+                )
+
+            [218] => Array
+                (
+                    [code] => TJ
+                    [name] => Tajikistan
+                )
+
+            [219] => Array
+                (
+                    [code] => TK
+                    [name] => Tokelau
+                )
+
+            [220] => Array
+                (
+                    [code] => TL
+                    [name] => Timor-Leste
+                )
+
+            [221] => Array
+                (
+                    [code] => TM
+                    [name] => Turkmenistan
+                )
+
+            [222] => Array
+                (
+                    [code] => TN
+                    [name] => Tunisia
+                )
+
+            [223] => Array
+                (
+                    [code] => TO
+                    [name] => Tonga
+                )
+
+            [224] => Array
+                (
+                    [code] => TR
+                    [name] => Turkey
+                )
+
+            [225] => Array
+                (
+                    [code] => TT
+                    [name] => Trinidad and Tobago
+                )
+
+            [226] => Array
+                (
+                    [code] => TV
+                    [name] => Tuvalu
+                )
+
+            [227] => Array
+                (
+                    [code] => TW
+                    [name] => Taiwan, Province of China
+                )
+
+            [228] => Array
+                (
+                    [code] => TZ
+                    [name] => Tanzania, United Republic of
+                )
+
+            [229] => Array
+                (
+                    [code] => UA
+                    [name] => Ukraine
+                )
+
+            [230] => Array
+                (
+                    [code] => UG
+                    [name] => Uganda
+                )
+
+            [231] => Array
+                (
+                    [code] => UM
+                    [name] => United States Minor Outlying Islands
+                )
+
+            [232] => Array
+                (
+                    [code] => US
+                    [name] => United States
+                )
+
+            [233] => Array
+                (
+                    [code] => UY
+                    [name] => Uruguay
+                )
+
+            [234] => Array
+                (
+                    [code] => UZ
+                    [name] => Uzbekistan
+                )
+
+            [235] => Array
+                (
+                    [code] => VA
+                    [name] => Holy See (Vatican City State)
+                )
+
+            [236] => Array
+                (
+                    [code] => VC
+                    [name] => Saint Vincent and the Grenadines
+                )
+
+            [237] => Array
+                (
+                    [code] => VE
+                    [name] => Venezuela, Bolivarian Republic of
+                )
+
+            [238] => Array
+                (
+                    [code] => VG
+                    [name] => Virgin Islands, British
+                )
+
+            [239] => Array
+                (
+                    [code] => VI
+                    [name] => Virgin Islands, U.S.
+                )
+
+            [240] => Array
+                (
+                    [code] => VN
+                    [name] => Viet Nam
+                )
+
+            [241] => Array
+                (
+                    [code] => VU
+                    [name] => Vanuatu
+                )
+
+            [242] => Array
+                (
+                    [code] => WF
+                    [name] => Wallis and Futuna
+                )
+
+            [243] => Array
+                (
+                    [code] => WS
+                    [name] => Samoa
+                )
+
+            [244] => Array
+                (
+                    [code] => YE
+                    [name] => Yemen
+                )
+
+            [245] => Array
+                (
+                    [code] => YT
+                    [name] => Mayotte
+                )
+
+            [246] => Array
+                (
+                    [code] => ZA
+                    [name] => South Africa
+                )
+
+            [247] => Array
+                (
+                    [code] => ZM
+                    [name] => Zambia
+                )
+
+            [248] => Array
+                (
+                    [code] => ZW
+                    [name] => Zimbabwe
+                )
+
+        )
+
+)
