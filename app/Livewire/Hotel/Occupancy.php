@@ -14,7 +14,7 @@ class Occupancy extends Component
 
     public function addRoom()
     {
-        if (count($this->rooms) < 4) {
+        if (count($this->rooms) < 4  ) {
 
             $this->rooms[] = ['adults' => 1];
         }
@@ -22,8 +22,11 @@ class Occupancy extends Component
 
     public function removeRoom($index)
     {
-        unset($this->rooms[$index]);
-        $this->rooms = array_values($this->rooms);
+        if (count($this->rooms) > 1) {
+
+            unset($this->rooms[$index]);
+            $this->rooms = array_values($this->rooms);
+        }
     }
 
     public function render()

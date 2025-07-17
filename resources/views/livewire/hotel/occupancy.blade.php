@@ -11,7 +11,7 @@
     <!-- Rooms List -->
     <div class="space-y-4">
         @foreach ($rooms as $index => $room)
-        <div class="bg-zinc-800 p-5 rounded-lg shadow-md space-y-4">
+        <div class="dark:bg-neutral-800 p-5 rounded-lg shadow-md space-y-4">
             <!-- Header -->
             <div class="flex items-center justify-between">
                 <h3 class="text-white font-semibold text-lg">

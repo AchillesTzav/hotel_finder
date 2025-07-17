@@ -1,9 +1,9 @@
 <div class="p-6">
-    <div class="flex flex-col justify-between gap-4 border-2 border-slate-300 rounded-xl p-6">
+    <div class="flex flex-col justify-between gap-4 dark:bg-neutral-900   rounded-xl p-6">
         <!-- header -->
         <div>
             <span class="flex items-center justify-center text-lg font-semibold">{{ __('Stays') }}</span>
-            <hr class="mt-2 border-slate-300" />
+            <hr class="mt-2 border-neutral-700" />
         </div>
 
         <!-- destination/hotel etc -->
