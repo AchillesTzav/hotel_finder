@@ -13,8 +13,9 @@ class Search extends Component
     }
 
     #[On('getDataEvent')]
-    public function test($payload) {
-    
+    public function test($payload)
+    {
+
         dd($payload);
     }
 }
