@@ -3,11 +3,13 @@
 namespace App\Livewire\Hotel;
 
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Availability extends Component
 {
-    public $hotels = [];
+    use WithPagination;
 
+    public $hotels = [];
 
     public function mount($hotels=[]) {
         $this->hotels = $hotels;

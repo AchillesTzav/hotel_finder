@@ -28,7 +28,6 @@ class RoomOccupancy extends Component
             $this->selected[] = $user;
         }
 
-
         $this->dispatch('update-rooms', [$this->index, $this->room]);
     }
 

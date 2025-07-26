@@ -16,7 +16,7 @@ class Autocomplete extends Component
         $this->query = $city_name;
 
         // dispatch to search component
-        $this->dispatch('getDataEvent', $this->query);
+        $this->dispatch('addCityToSearch', ['cityName' => $this->query]);
     }
 
     public function getCitiesProperty() {

@@ -12,7 +12,7 @@
                 <livewire:hotel.autocomplete />
             </div>
 
-           <div class="w-1/3">
+           <div wire:ignore class="w-1/3">
                 <flux:input id="flatpickr-date" label="Check in - Check out" />
             </div>
         </div>
@@ -26,7 +26,7 @@
 
         <!-- search -->
         <div class="flex justify-center">
-            <flux:button>Search</flux:button>
+            <flux:button wire:click="search">{{__('Search')}}</flux:button>
         </div>
     </div>
 </div>

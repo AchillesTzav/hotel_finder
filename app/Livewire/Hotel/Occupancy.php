@@ -22,6 +22,8 @@ class Occupancy extends Component
     {
         [$index, $room] = $payload;
         $this->rooms[$index] = $room;
+
+        $this->dispatch('addRoomsToSearch', $this->rooms);
     }
 
     public function addRoom()

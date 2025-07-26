@@ -44,7 +44,6 @@ class QuickSearch extends Component
 
         $cache_key = 'hotels_' . Str::uuid();
 
-        // 🧠 Cache it for 5 minutes
         Cache::put($cache_key, [
             'hotels' => $hotels,
             //'country_code' => $this->country_code,

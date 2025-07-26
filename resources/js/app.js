@@ -25,7 +25,7 @@ function initFlatpickr() {
                     checkout
                 };
                 
-                Livewire.dispatch('getDataEvent', [payload]);
+                Livewire.dispatch('addDatesToSearch', [payload]);
             }
             
         }
@@ -34,14 +34,23 @@ function initFlatpickr() {
 }
 
 // run when the page first loads 
-document.addEventListener('DOMContentLoaded', () => {
+
+document.addEventListener('livewire:init', () => {
+    initFlatpickr();
+})
+
+document.addEventListener('livewire:initialized', () => {
     initFlatpickr();
 })
 
 
-// Re-initialize after every Livewire DOM update
 document.addEventListener('livewire:load', () => {
-    Livewire.hook('message.processed', () => {
-        initFlatpickr();
-    });
+    initFlatpickr();
 });
+
+// Re-initialize flatpickr after every Livewire update (DOM refresh)
+document.addEventListener('livewire:update', () => {
+    initFlatpickr();
+});
+
+
