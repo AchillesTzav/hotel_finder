@@ -32,17 +32,20 @@ class FetchCities extends Command
         $this->info('Fetching cities for each country...');
 
         $liteAPI = new LiteAPI();
-        $countries = Country::pluck('code');
+        $countries = Country::pluck('id', 'code');
 
-        foreach ($countries as $code) {
+        foreach ($countries as $code => $country_id) {
             $this->info("➡ Country: $code");
 
             try {
                 $rc = $liteAPI->getCities($code);
 
-                $cities = array_map(fn($city) => ['name' => $city['city']], $rc['data']);
+                $cities = array_map(fn($city) => [
+                    'name' => $city['city'],
+                    'country_id' => $country_id, 
+                ], $rc['data']);
 
-                City::upsert($cities, ['name']);
+                City::upsert($cities, ['country_id','name']);
 
                 $this->info("Saved " . count($cities) . " cities for $code");
             } catch (\Throwable $e) {

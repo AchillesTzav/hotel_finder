@@ -3,6 +3,7 @@
 namespace App\Models\Hotels;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Hotels\City;
 
 class Country extends Model
 {
@@ -12,4 +13,8 @@ class Country extends Model
         'code',
         'name',
     ];
+
+    public function cities() {
+        return $this->hasMany(City::class);
+    }
 }
