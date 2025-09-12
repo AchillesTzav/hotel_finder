@@ -6,10 +6,7 @@
                 <div class="text-xl font-semibold mb-4">
                     {{ __('Find your next stay') }}
                 </div>
-
                 <livewire:hotel.availability :hotels="$hotels" />
-
-                
             </div>
         </div>
     </div>

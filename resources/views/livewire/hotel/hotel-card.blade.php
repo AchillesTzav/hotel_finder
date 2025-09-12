@@ -1,5 +1,3 @@
-@props(['hotel'])
-
 <div class="flex bg-neutral-800 shadow-lg rounded-l-xl rounded-r-xl overflow-hidden mb-6">
     <!-- Hotel Image -->
     <div class="w-60 h-60">

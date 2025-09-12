@@ -3,11 +3,14 @@
 namespace App\Livewire;
 
 use App\Models\Hotels\City;
+use App\Models\Hotels\Search as HotelSearch;
+use App\Models\User;
+use App\Services\LiteAPI\LiteAPI;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Str;
 use Livewire\Attributes\On;
 use Livewire\Component;
-use App\Services\LiteAPI\LiteAPI;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Cache;
 
 class Search extends Component
 {
@@ -42,26 +45,76 @@ class Search extends Component
         $checkin = $this->searchData['checkin'];
         $checkout = $this->searchData['checkout'];
 
+        $occupancies = [];
+
+        foreach ($this->searchData['rooms'] as $room) {
+            $adults = 0;
+            $children = [];
+
+            // collection of users inside the room
+            $users = User::findMany($room);
+
+            foreach ($users as $user) {
+                $age = Carbon::parse($user->date_of_birth)->age;
+                if ($age >= 18) {
+                    $adults++;
+                } else {
+                    $children[] = $age;
+                }
+            }
+
+            // Add room occupancy to the array
+            $occupancies[] = [
+                'adults' => $adults,
+                'children' => $children,
+            ];
+
+            $occupancy_string = implode('&', array_map(function ($room) {
+                $str = $room['adults'];
+                if (count($room['children']) > 0) {
+                    $str .= '-'.implode(',', $room['children']);
+                }
+
+                return $str;
+            }, $occupancies));
+        }
+
+        HotelSearch::create([
+            'city' => $cityName,
+            'checkin' => $checkin,
+            'checkout' => $checkout,
+            'occupancy' => $occupancy_string,
+        ]);
+
         $city = City::with('country')->where('name', $cityName)->first();
         $countryCode = $city->country->code;
 
-        if (!$countryCode || !$cityName) return;
+        if (! $countryCode || ! $cityName) {
+            return;
+        }
 
-        $liteAPI = new LiteAPI();
+        $liteAPI = new LiteAPI;
 
         $rc = $liteAPI->searchHotels($countryCode, $cityName);
 
+        // dd($rc);
         $hotels = collect($rc['data' ?? []]);
+
+        dd($hotels);
 
         file_put_contents('hotels.dat', print_r($hotels, true));
 
-        $cache_key = 'search_' . Str::uuid();
+        $cache_key = 'search_'.Str::uuid();
 
         Cache::put($cache_key, [
             'hotels' => $hotels,
-            //'country_code' => $this->country_code,
+            // 'country_code' => $this->country_code,
         ], now()->addMinutes(5));
 
         return redirect()->route('availability', ['key' => $cache_key]);
+    }
+
+    public function storeHotels() {
+
     }
 }

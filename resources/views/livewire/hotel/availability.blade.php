@@ -1,5 +1,5 @@
 <div>
     @foreach ($hotels as $hotel)
-        @include('hotel.hotel-card', ['hotels' => $hotels])
+        <livewire:hotel.hotel-card :hotel="$hotel" />
     @endforeach
 </div>
