@@ -35,7 +35,7 @@ class FetchCities extends Command
         $countries = Country::pluck('id', 'code');
 
         foreach ($countries as $code => $country_id) {
-            $this->info("➡ Country: $code");
+            $this->info("  Country: $code");
 
             try {
                 $rc = $liteAPI->getCities($code);
@@ -48,9 +48,12 @@ class FetchCities extends Command
                 City::upsert($cities, ['country_id','name']);
 
                 $this->info("Saved " . count($cities) . " cities for $code");
+
+                sleep(1);
             } catch (\Throwable $e) {
                 $this->error("Error for $code: " . $e->getMessage());
                 Log::error("FetchCities error for $code", ['exception' => $e]);
+                sleep(5);
             }
         }
 

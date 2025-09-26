@@ -12,7 +12,7 @@ Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
-Route::get('/availability/{key}', [AvailabilityController::class, 'availability'])
+Route::get('/availability/{search_id}', [AvailabilityController::class, 'availability'])
     ->middleware(['auth', 'verified'])
     ->name('availability');
 

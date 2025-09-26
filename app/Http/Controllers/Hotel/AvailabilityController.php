@@ -4,16 +4,14 @@ namespace App\Http\Controllers\Hotel;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cache;
 
 class AvailabilityController extends Controller
 {
     public function availability(Request $request) {
-        $cache_key = $request->route('key');
-        $hotels = Cache::get($cache_key);
+        $search_id = $request->route('search_id');
 
         return view('hotel.availability', [
-            'hotels' => $hotels['hotels'],
+            'search_id' => $search_id,
         ]);
     }
 }

@@ -4,73 +4,57 @@ namespace App\Services\LiteAPI;
 
 use GuzzleHttp\Client;
 
-class LiteAPI
+class LiteAPI extends LiteAPIClient
 {
+    public function __construct() {
+        parent::__construct();
+    }
 
     public function getCountries()
     {
-        $client = new Client([
-            'base_uri' => 'https://api.liteapi.travel/v3.0/data/',
-        ]);
-
-        $response = $client->request('GET', 'countries?timeout=4', [
-            'headers' => [
-                'X-API-Key' => env('LITEAPI_SAND_KEY'),
-                'accept' => 'application/json',
-            ],
-        ]);
+        $response = $this->client->request('GET', 'countries?timeout=4');
 
         return json_decode($response->getBody()->getContents(), true);
     }
 
-
     public function getCities($countryCode)
     {
-
-        // https://api.liteapi.travel/v3.0/data/cities?countryCode=GR&timeout=4
-
-        $client = new Client([
-            'base_uri' => 'https://api.liteapi.travel/v3.0/data/',
-        ]);
-
-
-        $response = $client->request('GET', 'cities?countryCode=' . $countryCode . '&timeout=4', [
-            'headers' => [
-                'X-API-Key' => env('LITEAPI_SAND_KEY'),
-                'accept' => 'application/json',
-            ],
-        ]);
+        $response = $this->client->request('GET', 'cities?countryCode=' . $countryCode . '&timeout=4');
 
         return json_decode($response->getBody()->getContents(), true);
     }
 
     public function getHotels($countryCode) {
-        $client = new Client([
-            'base_uri' => 'https://api.liteapi.travel/v3.0/data/',
-        ]);
-
-        $response = $client->request('GET', 'hotels?countryCode=' . $countryCode . '&timeout=4', [
-            'headers' => [
-                'X-API-Key' => env('LITEAPI_SAND_KEY'),
-                'accept' => 'application/json',
-            ],
-        ]);
+        $response = $this->client->request('GET', 'hotels?countryCode=' . $countryCode . '&timeout=4');
 
         return json_decode($response->getBody()->getContents(), true);
     }
 
     public function searchHotels($countryCode, $cityName) {
-        $client = new Client([
-            'base_uri' => 'https://api.liteapi.travel/v3.0/data/',
-        ]);
-
-        $response = $client->request('GET', 'hotels?countryCode=' . $countryCode . '&cityName=' . $cityName . '&timeout=4', [
-            'headers' => [
-                'X-API-Key' => env('LITEAPI_SAND_KEY'),
-                'accept' => 'application/json',
-            ],
-        ]);
+        $response = $this->client->request('GET', 'hotels?countryCode=' . $countryCode . '&cityName=' . $cityName . '&timeout=4');
 
         return json_decode($response->getBody()->getContents(), true); 
+    }
+
+    public function getHotelRates($search_params) {
+
+        /**
+         * @todo required params: 
+         *     check-in + check-out, 
+         *     currency, 
+         *     guestNationality, (country code) 
+         *     hotel-id/ city / country,
+         * 
+         *  @base_uri https://api.liteapi.travel/v3.0/hotels/rates
+         * 
+         *  @body '{"occupancies":[{"adults":2,"children":[7,5]},{"adults":1}],"currency":"USD","guestNationality":"US","checkin":"2025-11-01","checkout":"2025-11-02","cityName":"New York"}'
+         */
+
+         $response = $this->client->request('POST', 'hotels/rates', [
+            'body' => $search_params,
+         ]);
+
+         return json_decode($response->getBody()->getContents(), true);
+
     }
 }

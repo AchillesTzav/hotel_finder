@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 use Livewire\Attributes\On;
 use Livewire\Component;
+use App\Jobs\ProcessHotels;
 
 class Search extends Component
 {
@@ -79,15 +80,39 @@ class Search extends Component
             }, $occupancies));
         }
 
-        HotelSearch::create([
+        $hotelSearch = HotelSearch::create([
             'city' => $cityName,
             'checkin' => $checkin,
             'checkout' => $checkout,
             'occupancy' => $occupancy_string,
         ]);
 
+        $search_id = $hotelSearch->id;
+
+
         $city = City::with('country')->where('name', $cityName)->first();
         $countryCode = $city->country->code;
+
+        //"occupancies":[{"adults":2},{"adults":1}]}'
+        // 3&1
+        $occupancy_arr = explode("&", $occupancy_string);
+
+        $occupancy_object = [];
+        foreach ($occupancy_arr as $room) {
+            $occupancy_object[] = [
+                ['adults' => $room]
+            ];
+        }
+
+        $occupancy_json = json_encode($occupancy_object); 
+        
+
+        $search_params = [
+            'city' => $cityName,
+            'checkin' => $checkin,
+            'checkout' => $checkout,
+            'occupancy' => $occupancy_json,
+        ];
 
         if (! $countryCode || ! $cityName) {
             return;
@@ -97,24 +122,16 @@ class Search extends Component
 
         $rc = $liteAPI->searchHotels($countryCode, $cityName);
 
-        // dd($rc);
-        $hotels = collect($rc['data' ?? []]);
-
-        dd($hotels);
-
-        file_put_contents('hotels.dat', print_r($hotels, true));
-
-        $cache_key = 'search_'.Str::uuid();
-
-        Cache::put($cache_key, [
-            'hotels' => $hotels,
-            // 'country_code' => $this->country_code,
-        ], now()->addMinutes(5));
-
-        return redirect()->route('availability', ['key' => $cache_key]);
+        /**
+         * @todo job batching if suppliers > 1
+         */
+        ProcessHotels::dispatch($rc['data']);
+        
+        /**
+         * @todo add search id to request
+         */
+        return redirect()->route('availability', ['search_id' => $search_id]);
     }
 
-    public function storeHotels() {
-
-    }
+    
 }
