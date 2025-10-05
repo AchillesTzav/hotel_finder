@@ -23,5 +23,6 @@ class Hotel extends Model
         'reviewCount',
         'country',
         'city',
+        'price'
     ];
 }

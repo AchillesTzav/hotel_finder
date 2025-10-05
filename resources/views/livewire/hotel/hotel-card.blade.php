@@ -70,7 +70,7 @@
             <div class="flex items-center gap-6">
                 <div class="flex flex-col text-right">
                     <span class="font-bold text-lg">
-                        {{ $hotel['currency'] ?? 'EUR' }} 153.00
+                        {{ $hotel['currency'] ?? 'EUR' }} {{$hotel['price']}}
                     </span>
                     <span class="text-xs text-gray-500 uppercase">2 nights</span>
                 </div>

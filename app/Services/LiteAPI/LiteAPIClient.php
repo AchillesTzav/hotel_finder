@@ -14,6 +14,7 @@ class LiteAPIClient {
             'headers' => [
                 'X-API-Key' => env('LITEAPI_SAND_KEY'),
                 'accept' => 'application/json',
+                'content-type' => 'application/json',
             ],
         ]);
     }

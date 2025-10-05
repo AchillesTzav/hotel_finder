@@ -2,16 +2,13 @@
 
 namespace App\Livewire;
 
+use App\Jobs\ProcessHotels;
 use App\Models\Hotels\City;
 use App\Models\Hotels\Search as HotelSearch;
 use App\Models\User;
-use App\Services\LiteAPI\LiteAPI;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Str;
 use Livewire\Attributes\On;
 use Livewire\Component;
-use App\Jobs\ProcessHotels;
 
 class Search extends Component
 {
@@ -42,19 +39,22 @@ class Search extends Component
 
     public function search()
     {
-        $cityName = $this->searchData['cityName'];
-        $checkin = $this->searchData['checkin'];
-        $checkout = $this->searchData['checkout'];
+        $cityName = $this->searchData['cityName'] ?? null;
+        $checkin = $this->searchData['checkin'] ?? null;
+        $checkout = $this->searchData['checkout'] ?? null;
 
+        if (! $cityName || ! $checkin || ! $checkout || empty($this->searchData['rooms'])) {
+            // you might want to throw an error or return
+            return;
+        }
+
+        // Build occupancies
         $occupancies = [];
-
         foreach ($this->searchData['rooms'] as $room) {
             $adults = 0;
             $children = [];
 
-            // collection of users inside the room
             $users = User::findMany($room);
-
             foreach ($users as $user) {
                 $age = Carbon::parse($user->date_of_birth)->age;
                 if ($age >= 18) {
@@ -64,22 +64,26 @@ class Search extends Component
                 }
             }
 
-            // Add room occupancy to the array
-            $occupancies[] = [
-                'adults' => $adults,
-                'children' => $children,
-            ];
+            // Only include 'children' if there are children
+            $roomData = ['adults' => $adults];
+            if (! empty($children)) {
+                $roomData['children'] = $children;
+            }
 
-            $occupancy_string = implode('&', array_map(function ($room) {
-                $str = $room['adults'];
-                if (count($room['children']) > 0) {
-                    $str .= '-'.implode(',', $room['children']);
-                }
-
-                return $str;
-            }, $occupancies));
+            $occupancies[] = $roomData;
         }
 
+        // Optional: save occupancy string to DB for reference
+        $occupancy_string = implode('&', array_map(function ($room) {
+            $str = $room['adults'];
+            if (! empty($room['children'])) {
+                $str .= '-' . implode(',', $room['children']);
+            }
+
+            return $str;
+        }, $occupancies));
+
+        //create search
         $hotelSearch = HotelSearch::create([
             'city' => $cityName,
             'checkin' => $checkin,
@@ -89,49 +93,27 @@ class Search extends Component
 
         $search_id = $hotelSearch->id;
 
-
+        // Fetch city & country code
         $city = City::with('country')->where('name', $cityName)->first();
-        $countryCode = $city->country->code;
+        $countryCode = $city->country->code ?? null;
 
-        //"occupancies":[{"adults":2},{"adults":1}]}'
-        // 3&1
-        $occupancy_arr = explode("&", $occupancy_string);
-
-        $occupancy_object = [];
-        foreach ($occupancy_arr as $room) {
-            $occupancy_object[] = [
-                ['adults' => $room]
-            ];
-        }
-
-        $occupancy_json = json_encode($occupancy_object); 
-        
-
-        $search_params = [
-            'city' => $cityName,
-            'checkin' => $checkin,
-            'checkout' => $checkout,
-            'occupancy' => $occupancy_json,
-        ];
-
-        if (! $countryCode || ! $cityName) {
+        if (! $countryCode) {
             return;
         }
 
-        $liteAPI = new LiteAPI;
+        //data to use in searchHotels and getMinHotelRates in ProccesHotels
+        $search_data = [
+            'occupancies' => $occupancies,
+            'checkin' => $checkin,
+            'checkout' => $checkout,
+            'countryCode' =>  $countryCode,
+            'cityName' => $cityName,
+            'currency' => 'EUR',
+        ];
 
-        $rc = $liteAPI->searchHotels($countryCode, $cityName);
+        // job call
+        ProcessHotels::dispatch($search_data);
 
-        /**
-         * @todo job batching if suppliers > 1
-         */
-        ProcessHotels::dispatch($rc['data']);
-        
-        /**
-         * @todo add search id to request
-         */
         return redirect()->route('availability', ['search_id' => $search_id]);
     }
-
-    
 }

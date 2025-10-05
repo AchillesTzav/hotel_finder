@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('hotels', function (Blueprint $table) {
             $table->id();
-            $table->string('lite_id')->unique()->index(); // not FK, just external API ID
+            $table->string('lite_id')->unique()->index(); 
             $table->string('name');
             $table->longText('description')->nullable();
             $table->string('main_photo')->nullable();
